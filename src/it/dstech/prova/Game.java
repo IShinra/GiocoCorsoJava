@@ -10,7 +10,8 @@ public class Game {
 		System.out.println("DEF ; DEFBASE " + pg.DEFBASE + " - " + pg.getDEF());
 		System.out.println("ATK ; ATKBASE " + pg.ATKBASE + " - " + pg.getATK());
 		System.out.println("DANNO ATTACCO SPECIALE " + pg.khamehameha());
-		System.out.println("HAI SUBITO UN DANNO DI " + pg.khamehameha() + ",ORA HAI " + pg.setHP(pg.khamehameha()) + "HP");
+		System.out.println(
+				"HAI SUBITO UN DANNO DI " + pg.khamehameha() + ",ORA HAI " + pg.setHP(pg.khamehameha()) + "HP");
 
 	}
 }
