@@ -2,9 +2,9 @@ package it.dstech.prova;
 
 public abstract class Caratteristiche {
 
-	private final int hp = 100;
-	private final int def = 10;
-	private final int atk = 20;
+	protected final int HPBASE = 100;
+	protected final int DEFBASE = 10;
+	protected final int ATKBASE = 20;
 
 	public void cammina() {
 		System.out.println("cammina");
