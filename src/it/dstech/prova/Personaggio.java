@@ -15,7 +15,7 @@ public class Personaggio extends Caratteristiche implements Stili {
 		return (HPBASE + stamina);
 	}
 
-	public int setHP(int danno) {
+	public int setHP(int danno) { // calcola del danno.
 		return (getHP() - danno);
 	}
 
