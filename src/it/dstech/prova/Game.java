@@ -1,17 +1,18 @@
+
 package it.dstech.prova;
 
 public class Game {
 	public static void main(String args[]) {
-		Personaggio pg = new Personaggio(10,20,30);
-		pg.cammina();
-		pg.getHP();
-		pg.getDEF();
-		pg.getATK();
-		pg.khamehameha();
-		System.out.println("vita: " + pg.getHP());
-		System.out.println("difesa: " + pg.getDEF());
-		System.out.println("attacco: " + pg.getATK());
-		System.out.println("danno khamehameha: " +pg.khamehameha());
-	}
 
+		Personaggio pg = new Personaggio(10, 10, 10);
+		pg.cammina();
+		pg.pugno();
+		System.out.println("HP ; HPBASE " + pg.HPBASE + " - " + pg.getHP());
+		System.out.println("DEF ; DEFBASE " + pg.DEFBASE + " - " + pg.getDEF());
+		System.out.println("ATK ; ATKBASE " + pg.ATKBASE + " - " + pg.getATK());
+		System.out.println("DANNO ATTACCO SPECIALE " + pg.khamehameha());
+		System.out.println(
+				"HAI SUBITO UN DANNO DI " + pg.khamehameha() + ",ORA HAI " + pg.setHP(pg.khamehameha()) + "HP");
+
+	}
 }
