@@ -1,3 +1,4 @@
+
 package it.dstech.prova;
 
 public abstract class Caratteristiche {
