@@ -15,3 +15,9 @@ public class Game {
 
 	}
 }
+
+/*
+ * dopo ogni modifica : commit. scelgo la classe che voglio committare
+ * (consiglia quelle modificate). messaggio (commit) comprensibile.
+ * 
+ */
