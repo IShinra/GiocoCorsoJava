@@ -1,4 +1,3 @@
-
 package it.dstech.prova;
 
 public class Personaggio extends Caratteristiche implements Stili {
@@ -51,3 +50,4 @@ public class Personaggio extends Caratteristiche implements Stili {
 	}
 
 }
+

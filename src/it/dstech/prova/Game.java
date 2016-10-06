@@ -1,4 +1,3 @@
-
 package it.dstech.prova;
 
 public class Game {
