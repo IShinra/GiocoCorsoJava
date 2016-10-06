@@ -25,5 +25,9 @@ public class Personaggio extends Caratteristiche implements Stili {
 		System.out.println("atkspc");
 
 	}
-
+	
+	public int getHP()
+	{
+		return(HP+stamina);
+	}
 }
