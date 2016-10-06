@@ -48,5 +48,4 @@ public class Personaggio extends Caratteristiche implements Stili {
 		System.out.println("atkspc");
 
 	}
-
 }
