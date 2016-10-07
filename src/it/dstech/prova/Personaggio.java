@@ -7,6 +7,8 @@ public class Personaggio extends Caratteristiche implements Stili {
 	private int def;
 	private String nome;
 	private int hpTotali;
+	private int hpMax;
+	protected int hpPercentuale;
 
 	public Personaggio(String nome, int stamina, int atk, int def) {
 		this.stamina = stamina;
@@ -14,13 +16,14 @@ public class Personaggio extends Caratteristiche implements Stili {
 		this.def = def;
 		this.nome = nome;
 		this.hpTotali = stamina + HPBASE;
+		hpMax = hpTotali;
 
 	}
 
 	public static void combact(Personaggio p, Personaggio p2) {
 		boolean giocoFinito = false;
-		System.out.println("la vita massima di " + p.getNome() + " è " + p.getHpTotali());
-		System.out.println("la vita massima di " + p2.getNome() + " è " + p2.getHpTotali());
+		System.out.println("la vita massima di " + p.getNome() + " è " + p.convertPerc(p.getHpTotali())+"%");
+		System.out.println("la vita massima di " + p2.getNome() + " è " + p.convertPerc(p2.getHpTotali())+"%");
 		while (giocoFinito == false) {
 			int numcasuale = (int) (0 + Math.random() * 3);
 			int x = p.calcio(p);
@@ -40,7 +43,7 @@ public class Personaggio extends Caratteristiche implements Stili {
 				break;
 			}
 			p.setHpTotali(p.hpTotali - x);
-			System.out.println("vita rimasta a Goku : " + p.getHpTotali());
+			System.out.println("vita rimasta a Goku : " + p.convertPerc(p.getHpTotali())+"%");
 
 			numcasuale = (int) (0 + Math.random() * 3);
 			switch (numcasuale) {
@@ -58,7 +61,7 @@ public class Personaggio extends Caratteristiche implements Stili {
 				break;
 			}
 			p2.setHpTotali(p2.hpTotali - y);
-			System.out.println("vita rimasta a Naruto : " + p2.getHpTotali());
+			System.out.println("vita rimasta a Naruto : " + p.convertPerc(p2.getHpTotali())+"%");
 
 			if (p.getHpTotali() <= 0 || p2.getHpTotali() <= 0) {
 
@@ -141,5 +144,13 @@ public class Personaggio extends Caratteristiche implements Stili {
 			System.out.println("che culo hai fatto un colpo di cristo(critico)!!!:)");
 		return range;
 	}
+	
+	public int convertPerc(int hpTotali){
+		hpPercentuale  = hpTotali * 100/ hpMax;
+		return hpPercentuale;
+	}
+	
+	
+	
 
 }
