@@ -10,12 +10,12 @@ public class Personaggio extends Caratteristiche implements Stili {
 		this.stamina = stamina;
 		this.atk = atk;
 		this.def = def;
-		this.setNome(nome);
+		this.nome = nome;
 	}
 
 	public static void combact(Personaggio p, Personaggio p2) {
-		System.out.println("Goku : " + p.setHP(p2.pugno(p2)));
-		System.out.println("Naruto : " + p2.setHP(p.calcio(p)));
+		System.out.println("Goku : " + p.setHP(p2.pugno(p2) - p.getDEF()));
+		System.out.println("Naruto : " + p2.setHP(p.calcio(p) - p2.getDEF()));
 
 		if (p.getHP() > p2.getHP())
 			System.out.println("Vincitore : " + p.getNome());
@@ -51,21 +51,21 @@ public class Personaggio extends Caratteristiche implements Stili {
 	@Override
 	public int pugno(Personaggio p) {
 		int danno;
-		danno = (p.getATK() + 50) - p.getDEF();
+		danno = (p.getATK() + 50);
 		return danno;
 	}
 
 	@Override
 	public int calcio(Personaggio p) {
 		int danno;
-		danno = (p.getATK() + 70) - p.getDEF();
+		danno = (p.getATK() + 70);
 		return danno;
 	}
 
 	@Override
 	public int atkspc(Personaggio p) {
 		int danno;
-		danno = (p.getATK() + 100) - p.getDEF();
+		danno = (p.getATK() + 100);
 		return danno;
 	}
 
