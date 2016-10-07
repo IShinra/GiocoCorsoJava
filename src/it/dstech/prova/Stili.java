@@ -1,9 +1,9 @@
 package it.dstech.prova;
 
 interface Stili {
-	void pugno();
+	int pugno(Personaggio p);
 
-	void calcio();
+	int calcio(Personaggio p);
 
-	void atkspc();
+	int atkspc(Personaggio p);
 }
